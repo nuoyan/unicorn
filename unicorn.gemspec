@@ -14,7 +14,7 @@ end.compact
 
 Gem::Specification.new do |s|
   s.name = %q{unicorn}
-  s.version = ENV["VERSION"].dup
+  s.version = "4.2.1" #ENV["VERSION"].dup
   s.authors = ["#{name} hackers"]
   s.summary = summary
   s.date = Time.now.utc.strftime('%Y-%m-%d')
