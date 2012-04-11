@@ -1,4 +1,5 @@
 # -*- encoding: binary -*-
+ENV["VERSION"] = "4.2.1-patched"
 ENV["VERSION"] or abort "VERSION= must be specified"
 manifest = File.readlines('.manifest').map! { |x| x.chomp! }
 require 'wrongdoc'
@@ -14,7 +15,7 @@ end.compact
 
 Gem::Specification.new do |s|
   s.name = %q{unicorn}
-  s.version = "4.2.1" #ENV["VERSION"].dup
+  s.version = ENV["VERSION"].dup
   s.authors = ["#{name} hackers"]
   s.summary = summary
   s.date = Time.now.utc.strftime('%Y-%m-%d')
